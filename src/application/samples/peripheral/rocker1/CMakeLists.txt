@@ -1,1 +1,6 @@
-set(SOURCES "${SOURCES}" "${CMAKE_CURRENT_SOURCE_DIR}/adc_demo.c" PARENT_SCOPE)
+set(SOURCES_LIST
+    ${CMAKE_CURRENT_SOURCE_DIR}/sle_uart_client.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/client_main.c
+    
+)
+set(SOURCES "${SOURCES}" ${SOURCES_LIST} PARENT_SCOPE)
