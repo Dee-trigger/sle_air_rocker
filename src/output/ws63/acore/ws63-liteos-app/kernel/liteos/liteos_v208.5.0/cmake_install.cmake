@@ -1,4 +1,4 @@
-# Install script for directory: Z:/hispark/ws63_2nd/src/kernel/liteos/liteos_v208.5.0
+# Install script for directory: Z:/my_github_pjt/sle_air_rocker/src/kernel/liteos/liteos_v208.5.0
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,46 +34,46 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "Z:/hispark/ws63_2nd/src/tools/bin/compiler/riscv/cc_riscv32_musl_100/cc_riscv32_musl_fp_win/bin/riscv32-linux-musl-objdump.exe")
+  set(CMAKE_OBJDUMP "Z:/my_github_pjt/sle_air_rocker/src/tools/bin/compiler/riscv/cc_riscv32_musl_100/cc_riscv32_musl_fp_win/bin/riscv32-linux-musl-objdump.exe")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("Z:/hispark/ws63_2nd/src/output/ws63/acore/ws63-liteos-app/kernel/liteos/liteos_v208.5.0/Huawei_LiteOS/arch/cmake_install.cmake")
+  include("Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/kernel/liteos/liteos_v208.5.0/Huawei_LiteOS/arch/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("Z:/hispark/ws63_2nd/src/output/ws63/acore/ws63-liteos-app/kernel/liteos/liteos_v208.5.0/Huawei_LiteOS/targets/cmake_install.cmake")
+  include("Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/kernel/liteos/liteos_v208.5.0/Huawei_LiteOS/targets/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("Z:/hispark/ws63_2nd/src/output/ws63/acore/ws63-liteos-app/kernel/liteos/liteos_v208.5.0/Huawei_LiteOS/kernel/cmake_install.cmake")
+  include("Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/kernel/liteos/liteos_v208.5.0/Huawei_LiteOS/kernel/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("Z:/hispark/ws63_2nd/src/output/ws63/acore/ws63-liteos-app/kernel/liteos/liteos_v208.5.0/Huawei_LiteOS/lib/cmake_install.cmake")
+  include("Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/kernel/liteos/liteos_v208.5.0/Huawei_LiteOS/lib/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("Z:/hispark/ws63_2nd/src/output/ws63/acore/ws63-liteos-app/kernel/liteos/liteos_v208.5.0/Huawei_LiteOS/drivers/cmake_install.cmake")
+  include("Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/kernel/liteos/liteos_v208.5.0/Huawei_LiteOS/drivers/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("Z:/hispark/ws63_2nd/src/output/ws63/acore/ws63-liteos-app/kernel/liteos/liteos_v208.5.0/Huawei_LiteOS/shell/cmake_install.cmake")
+  include("Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/kernel/liteos/liteos_v208.5.0/Huawei_LiteOS/shell/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("Z:/hispark/ws63_2nd/src/output/ws63/acore/ws63-liteos-app/kernel/liteos/liteos_v208.5.0/Huawei_LiteOS/compat/cmake_install.cmake")
+  include("Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/kernel/liteos/liteos_v208.5.0/Huawei_LiteOS/compat/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("Z:/hispark/ws63_2nd/src/output/ws63/acore/ws63-liteos-app/kernel/liteos/liteos_v208.5.0/Huawei_LiteOS/fs/cmake_install.cmake")
+  include("Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/kernel/liteos/liteos_v208.5.0/Huawei_LiteOS/fs/cmake_install.cmake")
 endif()
 

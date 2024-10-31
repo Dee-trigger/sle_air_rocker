@@ -1,4 +1,4 @@
-# Install script for directory: Z:/hispark/ws63_2nd/src/drivers/drivers/driver
+# Install script for directory: Z:/my_github_pjt/sle_air_rocker/src/drivers/drivers/driver
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,106 +34,106 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "Z:/hispark/ws63_2nd/src/tools/bin/compiler/riscv/cc_riscv32_musl_100/cc_riscv32_musl_fp_win/bin/riscv32-linux-musl-objdump.exe")
+  set(CMAKE_OBJDUMP "Z:/my_github_pjt/sle_air_rocker/src/tools/bin/compiler/riscv/cc_riscv32_musl_100/cc_riscv32_musl_fp_win/bin/riscv32-linux-musl-objdump.exe")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("Z:/hispark/ws63_2nd/src/output/ws63/acore/ws63-liteos-app/driver/adc/cmake_install.cmake")
+  include("Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/driver/adc/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("Z:/hispark/ws63_2nd/src/output/ws63/acore/ws63-liteos-app/driver/dma/cmake_install.cmake")
+  include("Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/driver/dma/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("Z:/hispark/ws63_2nd/src/output/ws63/acore/ws63-liteos-app/driver/gpio/cmake_install.cmake")
+  include("Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/driver/gpio/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("Z:/hispark/ws63_2nd/src/output/ws63/acore/ws63-liteos-app/driver/i2c/cmake_install.cmake")
+  include("Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/driver/i2c/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("Z:/hispark/ws63_2nd/src/output/ws63/acore/ws63-liteos-app/driver/i2s/cmake_install.cmake")
+  include("Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/driver/i2s/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("Z:/hispark/ws63_2nd/src/output/ws63/acore/ws63-liteos-app/driver/lpm/cmake_install.cmake")
+  include("Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/driver/lpm/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("Z:/hispark/ws63_2nd/src/output/ws63/acore/ws63-liteos-app/driver/pinmux/cmake_install.cmake")
+  include("Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/driver/pinmux/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("Z:/hispark/ws63_2nd/src/output/ws63/acore/ws63-liteos-app/driver/pmp/cmake_install.cmake")
+  include("Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/driver/pmp/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("Z:/hispark/ws63_2nd/src/output/ws63/acore/ws63-liteos-app/driver/pwm/cmake_install.cmake")
+  include("Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/driver/pwm/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("Z:/hispark/ws63_2nd/src/output/ws63/acore/ws63-liteos-app/driver/security/cmake_install.cmake")
+  include("Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/driver/security/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("Z:/hispark/ws63_2nd/src/output/ws63/acore/ws63-liteos-app/driver/security_unified/cmake_install.cmake")
+  include("Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/driver/security_unified/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("Z:/hispark/ws63_2nd/src/output/ws63/acore/ws63-liteos-app/driver/spi/cmake_install.cmake")
+  include("Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/driver/spi/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("Z:/hispark/ws63_2nd/src/output/ws63/acore/ws63-liteos-app/driver/systick/cmake_install.cmake")
+  include("Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/driver/systick/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("Z:/hispark/ws63_2nd/src/output/ws63/acore/ws63-liteos-app/driver/tcxo/cmake_install.cmake")
+  include("Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/driver/tcxo/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("Z:/hispark/ws63_2nd/src/output/ws63/acore/ws63-liteos-app/driver/timer/cmake_install.cmake")
+  include("Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/driver/timer/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("Z:/hispark/ws63_2nd/src/output/ws63/acore/ws63-liteos-app/driver/tsensor/cmake_install.cmake")
+  include("Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/driver/tsensor/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("Z:/hispark/ws63_2nd/src/output/ws63/acore/ws63-liteos-app/driver/uart/cmake_install.cmake")
+  include("Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/driver/uart/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("Z:/hispark/ws63_2nd/src/output/ws63/acore/ws63-liteos-app/driver/watchdog/cmake_install.cmake")
+  include("Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/driver/watchdog/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("Z:/hispark/ws63_2nd/src/output/ws63/acore/ws63-liteos-app/driver/rtc_unified/cmake_install.cmake")
+  include("Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/driver/rtc_unified/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("Z:/hispark/ws63_2nd/src/output/ws63/acore/ws63-liteos-app/driver/efuse/cmake_install.cmake")
+  include("Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/driver/efuse/cmake_install.cmake")
 endif()
 

@@ -17,7 +17,7 @@
 rule C_COMPILER__gmssl_hmac_sm3_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -25,7 +25,7 @@ rule C_COMPILER__gmssl_hmac_sm3_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__gmssl_hmac_sm3_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -36,7 +36,7 @@ rule C_STATIC_LIBRARY_LINKER__gmssl_hmac_sm3_
 rule C_COMPILER__ws63-liteos-app_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -44,7 +44,7 @@ rule C_COMPILER__ws63-liteos-app_
 # Rule for linking C executable.
 
 rule C_EXECUTABLE_LINKER__ws63-liteos-app_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $FLAGS $LINK_FLAGS @$RSP_FILE -o $TARGET_FILE  && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $FLAGS $LINK_FLAGS @$RSP_FILE -o $TARGET_FILE  && $POST_BUILD"
   description = Linking C executable $TARGET_FILE
   rspfile = $RSP_FILE
   rspfile_content = $in $LINK_PATH $LINK_LIBRARIES
@@ -57,7 +57,7 @@ rule C_EXECUTABLE_LINKER__ws63-liteos-app_
 rule C_COMPILER__mbedtls_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -65,7 +65,7 @@ rule C_COMPILER__mbedtls_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__mbedtls_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS @$RSP_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS @$RSP_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   rspfile = $RSP_FILE
   rspfile_content = $in $LINK_PATH $LINK_LIBRARIES
@@ -78,7 +78,7 @@ rule C_STATIC_LIBRARY_LINKER__mbedtls_
 rule C_COMPILER__coap_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -86,7 +86,7 @@ rule C_COMPILER__coap_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__coap_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -105,7 +105,7 @@ rule CUSTOM_COMMAND
 rule C_COMPILER__samples_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -113,7 +113,7 @@ rule C_COMPILER__samples_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__samples_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -124,7 +124,7 @@ rule C_STATIC_LIBRARY_LINKER__samples_
 rule ASM_COMPILER__ws63_liteos_app_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building ASM object $out
 
 
@@ -134,7 +134,7 @@ rule ASM_COMPILER__ws63_liteos_app_
 rule C_COMPILER__ws63_liteos_app_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -142,7 +142,7 @@ rule C_COMPILER__ws63_liteos_app_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__ws63_liteos_app_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -153,7 +153,7 @@ rule C_STATIC_LIBRARY_LINKER__ws63_liteos_app_
 rule C_COMPILER__non_os_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -161,7 +161,7 @@ rule C_COMPILER__non_os_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__non_os_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -172,7 +172,7 @@ rule C_STATIC_LIBRARY_LINKER__non_os_
 rule C_COMPILER__osal_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -180,7 +180,7 @@ rule C_COMPILER__osal_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__osal_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -191,7 +191,7 @@ rule C_STATIC_LIBRARY_LINKER__osal_
 rule C_COMPILER__osal_adapt_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -199,7 +199,7 @@ rule C_COMPILER__osal_adapt_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__osal_adapt_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -210,7 +210,7 @@ rule C_STATIC_LIBRARY_LINKER__osal_adapt_
 rule C_COMPILER__adc_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -218,7 +218,7 @@ rule C_COMPILER__adc_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__adc_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -229,7 +229,7 @@ rule C_STATIC_LIBRARY_LINKER__adc_
 rule C_COMPILER__dma_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -237,7 +237,7 @@ rule C_COMPILER__dma_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__dma_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -248,7 +248,7 @@ rule C_STATIC_LIBRARY_LINKER__dma_
 rule C_COMPILER__gpio_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -256,7 +256,7 @@ rule C_COMPILER__gpio_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__gpio_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -267,7 +267,7 @@ rule C_STATIC_LIBRARY_LINKER__gpio_
 rule C_COMPILER__i2c_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -275,7 +275,7 @@ rule C_COMPILER__i2c_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__i2c_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -286,7 +286,7 @@ rule C_STATIC_LIBRARY_LINKER__i2c_
 rule C_COMPILER__i2s_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -294,7 +294,7 @@ rule C_COMPILER__i2s_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__i2s_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -305,7 +305,7 @@ rule C_STATIC_LIBRARY_LINKER__i2s_
 rule C_COMPILER__lpm_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -313,7 +313,7 @@ rule C_COMPILER__lpm_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__lpm_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -324,7 +324,7 @@ rule C_STATIC_LIBRARY_LINKER__lpm_
 rule C_COMPILER__pmp_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -332,7 +332,7 @@ rule C_COMPILER__pmp_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__pmp_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -343,7 +343,7 @@ rule C_STATIC_LIBRARY_LINKER__pmp_
 rule C_COMPILER__pwm_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -351,7 +351,7 @@ rule C_COMPILER__pwm_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__pwm_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -362,7 +362,7 @@ rule C_STATIC_LIBRARY_LINKER__pwm_
 rule C_COMPILER__drv_security_unified_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -370,7 +370,7 @@ rule C_COMPILER__drv_security_unified_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__drv_security_unified_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -381,7 +381,7 @@ rule C_STATIC_LIBRARY_LINKER__drv_security_unified_
 rule C_COMPILER__spi_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -389,7 +389,7 @@ rule C_COMPILER__spi_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__spi_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -400,7 +400,7 @@ rule C_STATIC_LIBRARY_LINKER__spi_
 rule C_COMPILER__tsensor_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -408,7 +408,7 @@ rule C_COMPILER__tsensor_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__tsensor_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -419,7 +419,7 @@ rule C_STATIC_LIBRARY_LINKER__tsensor_
 rule C_COMPILER__uart_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -427,7 +427,7 @@ rule C_COMPILER__uart_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__uart_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -438,7 +438,7 @@ rule C_STATIC_LIBRARY_LINKER__uart_
 rule C_COMPILER__rtc_unified_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -446,7 +446,7 @@ rule C_COMPILER__rtc_unified_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__rtc_unified_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -457,7 +457,7 @@ rule C_STATIC_LIBRARY_LINKER__rtc_unified_
 rule C_COMPILER__efuse_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -465,7 +465,7 @@ rule C_COMPILER__efuse_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__efuse_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -476,7 +476,7 @@ rule C_STATIC_LIBRARY_LINKER__efuse_
 rule C_COMPILER__hal_adc_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -484,7 +484,7 @@ rule C_COMPILER__hal_adc_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__hal_adc_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -495,7 +495,7 @@ rule C_STATIC_LIBRARY_LINKER__hal_adc_
 rule C_COMPILER__hal_cpu_core_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -503,7 +503,7 @@ rule C_COMPILER__hal_cpu_core_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__hal_cpu_core_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -514,7 +514,7 @@ rule C_STATIC_LIBRARY_LINKER__hal_cpu_core_
 rule C_COMPILER__hal_dma_v151_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -522,7 +522,7 @@ rule C_COMPILER__hal_dma_v151_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__hal_dma_v151_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -533,7 +533,7 @@ rule C_STATIC_LIBRARY_LINKER__hal_dma_v151_
 rule C_COMPILER__hal_efuse_v151_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -541,7 +541,7 @@ rule C_COMPILER__hal_efuse_v151_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__hal_efuse_v151_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -552,7 +552,7 @@ rule C_STATIC_LIBRARY_LINKER__hal_efuse_v151_
 rule C_COMPILER__hal_gpio_v150_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -560,7 +560,7 @@ rule C_COMPILER__hal_gpio_v150_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__hal_gpio_v150_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -571,7 +571,7 @@ rule C_STATIC_LIBRARY_LINKER__hal_gpio_v150_
 rule C_COMPILER__hal_i2c_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -579,7 +579,7 @@ rule C_COMPILER__hal_i2c_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__hal_i2c_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -590,7 +590,7 @@ rule C_STATIC_LIBRARY_LINKER__hal_i2c_
 rule C_COMPILER__hal_mips_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -598,7 +598,7 @@ rule C_COMPILER__hal_mips_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__hal_mips_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -609,7 +609,7 @@ rule C_STATIC_LIBRARY_LINKER__hal_mips_
 rule C_COMPILER__hal_pmp_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -617,7 +617,7 @@ rule C_COMPILER__hal_pmp_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__hal_pmp_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -628,7 +628,7 @@ rule C_STATIC_LIBRARY_LINKER__hal_pmp_
 rule C_COMPILER__hal_pwm_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -636,7 +636,7 @@ rule C_COMPILER__hal_pwm_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__hal_pwm_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -647,7 +647,7 @@ rule C_STATIC_LIBRARY_LINKER__hal_pwm_
 rule C_COMPILER__hal_reboot_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -655,7 +655,7 @@ rule C_COMPILER__hal_reboot_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__hal_reboot_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -666,7 +666,7 @@ rule C_STATIC_LIBRARY_LINKER__hal_reboot_
 rule C_COMPILER__hal_security_unified_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -674,7 +674,7 @@ rule C_COMPILER__hal_security_unified_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__hal_security_unified_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -685,7 +685,7 @@ rule C_STATIC_LIBRARY_LINKER__hal_security_unified_
 rule C_COMPILER__hal_spi_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -693,7 +693,7 @@ rule C_COMPILER__hal_spi_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__hal_spi_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -704,7 +704,7 @@ rule C_STATIC_LIBRARY_LINKER__hal_spi_
 rule C_COMPILER__hal_uart_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -712,7 +712,7 @@ rule C_COMPILER__hal_uart_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__hal_uart_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -723,7 +723,7 @@ rule C_STATIC_LIBRARY_LINKER__hal_uart_
 rule C_COMPILER__hal_tsensor_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -731,7 +731,7 @@ rule C_COMPILER__hal_tsensor_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__hal_tsensor_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -742,7 +742,7 @@ rule C_STATIC_LIBRARY_LINKER__hal_tsensor_
 rule C_COMPILER__hal_sio_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -750,7 +750,7 @@ rule C_COMPILER__hal_sio_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__hal_sio_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -761,7 +761,7 @@ rule C_STATIC_LIBRARY_LINKER__hal_sio_
 rule C_COMPILER__hal_rtc_unified_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -769,7 +769,7 @@ rule C_COMPILER__hal_rtc_unified_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__hal_rtc_unified_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -780,7 +780,7 @@ rule C_STATIC_LIBRARY_LINKER__hal_rtc_unified_
 rule ASM_COMPILER__chip_ws63_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building ASM object $out
 
 
@@ -790,7 +790,7 @@ rule ASM_COMPILER__chip_ws63_
 rule C_COMPILER__chip_ws63_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -798,7 +798,7 @@ rule C_COMPILER__chip_ws63_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__chip_ws63_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -809,7 +809,7 @@ rule C_STATIC_LIBRARY_LINKER__chip_ws63_
 rule C_COMPILER__adc_port_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -817,7 +817,7 @@ rule C_COMPILER__adc_port_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__adc_port_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -828,7 +828,7 @@ rule C_STATIC_LIBRARY_LINKER__adc_port_
 rule C_COMPILER__pmp_cfg_ws63_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -836,7 +836,7 @@ rule C_COMPILER__pmp_cfg_ws63_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__pmp_cfg_ws63_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -847,7 +847,7 @@ rule C_STATIC_LIBRARY_LINKER__pmp_cfg_ws63_
 rule C_COMPILER__gpio_port_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -855,7 +855,7 @@ rule C_COMPILER__gpio_port_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__gpio_port_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -866,7 +866,7 @@ rule C_STATIC_LIBRARY_LINKER__gpio_port_
 rule C_COMPILER__liteos_port_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -874,7 +874,7 @@ rule C_COMPILER__liteos_port_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__liteos_port_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -885,7 +885,7 @@ rule C_STATIC_LIBRARY_LINKER__liteos_port_
 rule C_COMPILER__pwm_port_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -893,7 +893,7 @@ rule C_COMPILER__pwm_port_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__pwm_port_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -904,7 +904,7 @@ rule C_STATIC_LIBRARY_LINKER__pwm_port_
 rule C_COMPILER__uart_port_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -912,7 +912,7 @@ rule C_COMPILER__uart_port_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__uart_port_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -923,7 +923,7 @@ rule C_STATIC_LIBRARY_LINKER__uart_port_
 rule C_COMPILER__pmp_port_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -931,7 +931,7 @@ rule C_COMPILER__pmp_port_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__pmp_port_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -942,7 +942,7 @@ rule C_STATIC_LIBRARY_LINKER__pmp_port_
 rule C_COMPILER__i2c_porting_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -950,7 +950,7 @@ rule C_COMPILER__i2c_porting_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__i2c_porting_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -961,7 +961,7 @@ rule C_STATIC_LIBRARY_LINKER__i2c_porting_
 rule C_COMPILER__dma_port_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -969,7 +969,7 @@ rule C_COMPILER__dma_port_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__dma_port_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -980,7 +980,7 @@ rule C_STATIC_LIBRARY_LINKER__dma_port_
 rule C_COMPILER__spi_porting_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -988,7 +988,7 @@ rule C_COMPILER__spi_porting_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__spi_porting_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -999,7 +999,7 @@ rule C_STATIC_LIBRARY_LINKER__spi_porting_
 rule C_COMPILER__sfc_flash_config_ws63_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1007,7 +1007,7 @@ rule C_COMPILER__sfc_flash_config_ws63_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__sfc_flash_config_ws63_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1018,7 +1018,7 @@ rule C_STATIC_LIBRARY_LINKER__sfc_flash_config_ws63_
 rule C_COMPILER__sfc_port_ws63_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1026,7 +1026,7 @@ rule C_COMPILER__sfc_port_ws63_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__sfc_port_ws63_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1037,7 +1037,7 @@ rule C_STATIC_LIBRARY_LINKER__sfc_port_ws63_
 rule C_COMPILER__tsensor_port_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1045,7 +1045,7 @@ rule C_COMPILER__tsensor_port_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__tsensor_port_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1056,7 +1056,7 @@ rule C_STATIC_LIBRARY_LINKER__tsensor_port_
 rule C_COMPILER__efuse_port_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1064,7 +1064,7 @@ rule C_COMPILER__efuse_port_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__efuse_port_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1075,7 +1075,7 @@ rule C_STATIC_LIBRARY_LINKER__efuse_port_
 rule C_COMPILER__rtc_unified_port_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1083,7 +1083,7 @@ rule C_COMPILER__rtc_unified_port_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__rtc_unified_port_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1094,7 +1094,7 @@ rule C_STATIC_LIBRARY_LINKER__rtc_unified_port_
 rule C_COMPILER__sio_port_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1102,7 +1102,7 @@ rule C_COMPILER__sio_port_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__sio_port_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1113,7 +1113,7 @@ rule C_STATIC_LIBRARY_LINKER__sio_port_
 rule C_COMPILER__reboot_port_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1121,7 +1121,7 @@ rule C_COMPILER__reboot_port_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__reboot_port_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1132,7 +1132,7 @@ rule C_STATIC_LIBRARY_LINKER__reboot_port_
 rule C_COMPILER__soc_port_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1140,7 +1140,7 @@ rule C_COMPILER__soc_port_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__soc_port_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1151,7 +1151,7 @@ rule C_STATIC_LIBRARY_LINKER__soc_port_
 rule C_COMPILER__version_port_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1159,7 +1159,7 @@ rule C_COMPILER__version_port_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__version_port_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1170,7 +1170,7 @@ rule C_STATIC_LIBRARY_LINKER__version_port_
 rule C_COMPILER__pm_port_ws63_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1178,7 +1178,7 @@ rule C_COMPILER__pm_port_ws63_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__pm_port_ws63_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1189,7 +1189,7 @@ rule C_STATIC_LIBRARY_LINKER__pm_port_ws63_
 rule C_COMPILER__xo_trim_port_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1197,7 +1197,7 @@ rule C_COMPILER__xo_trim_port_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__xo_trim_port_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1208,7 +1208,7 @@ rule C_STATIC_LIBRARY_LINKER__xo_trim_port_
 rule C_COMPILER__dyn_mem_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1216,7 +1216,7 @@ rule C_COMPILER__dyn_mem_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__dyn_mem_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1227,7 +1227,7 @@ rule C_STATIC_LIBRARY_LINKER__dyn_mem_
 rule ASM_COMPILER__dfx_exception_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building ASM object $out
 
 
@@ -1237,7 +1237,7 @@ rule ASM_COMPILER__dfx_exception_
 rule C_COMPILER__dfx_exception_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1245,7 +1245,7 @@ rule C_COMPILER__dfx_exception_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__dfx_exception_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1256,7 +1256,7 @@ rule C_STATIC_LIBRARY_LINKER__dfx_exception_
 rule C_COMPILER__dfx_port_ws63_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1264,7 +1264,7 @@ rule C_COMPILER__dfx_port_ws63_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__dfx_port_ws63_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1275,7 +1275,7 @@ rule C_STATIC_LIBRARY_LINKER__dfx_port_ws63_
 rule C_COMPILER__partition_ws63_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1283,7 +1283,7 @@ rule C_COMPILER__partition_ws63_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__partition_ws63_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1294,7 +1294,7 @@ rule C_STATIC_LIBRARY_LINKER__partition_ws63_
 rule C_COMPILER__nv_ws63_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1302,7 +1302,7 @@ rule C_COMPILER__nv_ws63_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__nv_ws63_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1313,7 +1313,7 @@ rule C_STATIC_LIBRARY_LINKER__nv_ws63_
 rule C_COMPILER__nv_zdiag_ws63_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1321,7 +1321,7 @@ rule C_COMPILER__nv_zdiag_ws63_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__nv_zdiag_ws63_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1332,7 +1332,7 @@ rule C_STATIC_LIBRARY_LINKER__nv_zdiag_ws63_
 rule C_COMPILER__update_common_ws63_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1340,7 +1340,7 @@ rule C_COMPILER__update_common_ws63_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__update_common_ws63_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1351,7 +1351,7 @@ rule C_STATIC_LIBRARY_LINKER__update_common_ws63_
 rule C_COMPILER__update_storage_ws63_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1359,7 +1359,7 @@ rule C_COMPILER__update_storage_ws63_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__update_storage_ws63_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1370,7 +1370,7 @@ rule C_STATIC_LIBRARY_LINKER__update_storage_ws63_
 rule C_COMPILER__update_ab_ws63_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1378,7 +1378,7 @@ rule C_COMPILER__update_ab_ws63_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__update_ab_ws63_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1389,7 +1389,7 @@ rule C_STATIC_LIBRARY_LINKER__update_ab_ws63_
 rule C_COMPILER__mac_addr_ws63_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1397,7 +1397,7 @@ rule C_COMPILER__mac_addr_ws63_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__mac_addr_ws63_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1408,7 +1408,7 @@ rule C_STATIC_LIBRARY_LINKER__mac_addr_ws63_
 rule C_COMPILER__factory_ws63_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1416,7 +1416,7 @@ rule C_COMPILER__factory_ws63_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__factory_ws63_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1427,7 +1427,7 @@ rule C_STATIC_LIBRARY_LINKER__factory_ws63_
 rule C_COMPILER__wifi_service_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1435,7 +1435,7 @@ rule C_COMPILER__wifi_service_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__wifi_service_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1446,7 +1446,7 @@ rule C_STATIC_LIBRARY_LINKER__wifi_service_
 rule C_COMPILER__algorithm_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1454,7 +1454,7 @@ rule C_COMPILER__algorithm_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__algorithm_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1465,7 +1465,7 @@ rule C_STATIC_LIBRARY_LINKER__algorithm_
 rule C_COMPILER__app_init_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1473,7 +1473,7 @@ rule C_COMPILER__app_init_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__app_init_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1484,7 +1484,7 @@ rule C_STATIC_LIBRARY_LINKER__app_init_
 rule C_COMPILER__at_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1492,7 +1492,7 @@ rule C_COMPILER__at_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__at_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1503,7 +1503,7 @@ rule C_STATIC_LIBRARY_LINKER__at_
 rule C_COMPILER__wifi_at_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1511,7 +1511,7 @@ rule C_COMPILER__wifi_at_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__wifi_at_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1522,7 +1522,7 @@ rule C_STATIC_LIBRARY_LINKER__wifi_at_
 rule C_COMPILER__plt_at_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1530,7 +1530,7 @@ rule C_COMPILER__plt_at_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__plt_at_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1541,7 +1541,7 @@ rule C_STATIC_LIBRARY_LINKER__plt_at_
 rule C_COMPILER__dfx_diag_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1549,7 +1549,7 @@ rule C_COMPILER__dfx_diag_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__dfx_diag_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1560,7 +1560,7 @@ rule C_STATIC_LIBRARY_LINKER__dfx_diag_
 rule C_COMPILER__dfx_panic_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1568,7 +1568,7 @@ rule C_COMPILER__dfx_panic_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__dfx_panic_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1579,7 +1579,7 @@ rule C_STATIC_LIBRARY_LINKER__dfx_panic_
 rule C_COMPILER__soc_log_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1587,7 +1587,7 @@ rule C_COMPILER__soc_log_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__soc_log_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1598,7 +1598,7 @@ rule C_STATIC_LIBRARY_LINKER__soc_log_
 rule C_COMPILER__log_file_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1606,7 +1606,7 @@ rule C_COMPILER__log_file_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__log_file_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1617,7 +1617,7 @@ rule C_STATIC_LIBRARY_LINKER__log_file_
 rule C_COMPILER__dfx_preserve_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1625,7 +1625,7 @@ rule C_COMPILER__dfx_preserve_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__dfx_preserve_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1636,7 +1636,7 @@ rule C_STATIC_LIBRARY_LINKER__dfx_preserve_
 rule C_COMPILER__dfx_log_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1644,7 +1644,7 @@ rule C_COMPILER__dfx_log_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__dfx_log_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1655,7 +1655,7 @@ rule C_STATIC_LIBRARY_LINKER__dfx_log_
 rule C_COMPILER__dfx_log_reader_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1663,7 +1663,7 @@ rule C_COMPILER__dfx_log_reader_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__dfx_log_reader_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1674,7 +1674,7 @@ rule C_STATIC_LIBRARY_LINKER__dfx_log_reader_
 rule C_COMPILER__dfx_printer_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1682,7 +1682,7 @@ rule C_COMPILER__dfx_printer_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__dfx_printer_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1693,7 +1693,7 @@ rule C_STATIC_LIBRARY_LINKER__dfx_printer_
 rule C_COMPILER__cpu_utils_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1701,7 +1701,7 @@ rule C_COMPILER__cpu_utils_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__cpu_utils_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1712,7 +1712,7 @@ rule C_STATIC_LIBRARY_LINKER__cpu_utils_
 rule C_COMPILER__reboot_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1720,7 +1720,7 @@ rule C_COMPILER__reboot_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__reboot_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1731,7 +1731,7 @@ rule C_STATIC_LIBRARY_LINKER__reboot_
 rule C_COMPILER__diag_dfx_cmd_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1739,7 +1739,7 @@ rule C_COMPILER__diag_dfx_cmd_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__diag_dfx_cmd_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1750,7 +1750,7 @@ rule C_STATIC_LIBRARY_LINKER__diag_dfx_cmd_
 rule C_COMPILER__nv_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1758,7 +1758,7 @@ rule C_COMPILER__nv_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__nv_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1769,7 +1769,7 @@ rule C_STATIC_LIBRARY_LINKER__nv_
 rule C_COMPILER__partition_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1777,7 +1777,7 @@ rule C_COMPILER__partition_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__partition_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1788,7 +1788,7 @@ rule C_STATIC_LIBRARY_LINKER__partition_
 rule C_COMPILER__update_common_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1796,7 +1796,7 @@ rule C_COMPILER__update_common_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__update_common_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1807,7 +1807,7 @@ rule C_STATIC_LIBRARY_LINKER__update_common_
 rule C_COMPILER__update_storage_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1815,7 +1815,7 @@ rule C_COMPILER__update_storage_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__update_storage_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1826,7 +1826,7 @@ rule C_STATIC_LIBRARY_LINKER__update_storage_
 rule C_COMPILER__mips_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1834,7 +1834,7 @@ rule C_COMPILER__mips_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__mips_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1845,7 +1845,7 @@ rule C_STATIC_LIBRARY_LINKER__mips_
 rule C_COMPILER__cjson_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1853,7 +1853,7 @@ rule C_COMPILER__cjson_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__cjson_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1864,7 +1864,7 @@ rule C_STATIC_LIBRARY_LINKER__cjson_
 rule C_COMPILER__mqtt_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1872,7 +1872,7 @@ rule C_COMPILER__mqtt_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__mqtt_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1883,7 +1883,7 @@ rule C_STATIC_LIBRARY_LINKER__mqtt_
 rule C_COMPILER__wpa_supplicant_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1891,7 +1891,7 @@ rule C_COMPILER__wpa_supplicant_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__wpa_supplicant_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS @$RSP_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS @$RSP_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   rspfile = $RSP_FILE
   rspfile_content = $in $LINK_PATH $LINK_LIBRARIES
@@ -1904,7 +1904,7 @@ rule C_STATIC_LIBRARY_LINKER__wpa_supplicant_
 rule C_COMPILER__lwip_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1912,7 +1912,7 @@ rule C_COMPILER__lwip_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__lwip_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1923,7 +1923,7 @@ rule C_STATIC_LIBRARY_LINKER__lwip_
 rule C_COMPILER__lwip_tcm_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1931,7 +1931,7 @@ rule C_COMPILER__lwip_tcm_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__lwip_tcm_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1942,7 +1942,7 @@ rule C_STATIC_LIBRARY_LINKER__lwip_tcm_
 rule C_COMPILER__wifi_csa_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1950,7 +1950,7 @@ rule C_COMPILER__wifi_csa_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__wifi_csa_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1961,7 +1961,7 @@ rule C_STATIC_LIBRARY_LINKER__wifi_csa_
 rule C_COMPILER__wifi_auto_adjust_freq_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1969,7 +1969,7 @@ rule C_COMPILER__wifi_auto_adjust_freq_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__wifi_auto_adjust_freq_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1980,7 +1980,7 @@ rule C_STATIC_LIBRARY_LINKER__wifi_auto_adjust_freq_
 rule C_COMPILER__wifi_frag_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1988,7 +1988,7 @@ rule C_COMPILER__wifi_frag_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__wifi_frag_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1999,7 +1999,7 @@ rule C_STATIC_LIBRARY_LINKER__wifi_frag_
 rule C_COMPILER__wifi_radar_sensor_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2007,7 +2007,7 @@ rule C_COMPILER__wifi_radar_sensor_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__wifi_radar_sensor_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -2018,7 +2018,7 @@ rule C_STATIC_LIBRARY_LINKER__wifi_radar_sensor_
 rule C_COMPILER__wifi_tx_amsdu_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2026,7 +2026,7 @@ rule C_COMPILER__wifi_tx_amsdu_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__wifi_tx_amsdu_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -2037,7 +2037,7 @@ rule C_STATIC_LIBRARY_LINKER__wifi_tx_amsdu_
 rule C_COMPILER__wifi_btcoex_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2045,7 +2045,7 @@ rule C_COMPILER__wifi_btcoex_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__wifi_btcoex_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -2056,7 +2056,7 @@ rule C_STATIC_LIBRARY_LINKER__wifi_btcoex_
 rule C_COMPILER__wifi_uapsd_ap_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2064,7 +2064,7 @@ rule C_COMPILER__wifi_uapsd_ap_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__wifi_uapsd_ap_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -2075,7 +2075,7 @@ rule C_STATIC_LIBRARY_LINKER__wifi_uapsd_ap_
 rule C_COMPILER__testsuite_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ccache Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2083,7 +2083,7 @@ rule C_COMPILER__testsuite_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__testsuite_
-  command = cmd.exe /C "$PRE_LINK && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && Z:\my_github_pjt\sle_air_rocker\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-ar.exe rcD $TARGET_FILE $LINK_FLAGS $in && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -2092,7 +2092,7 @@ rule C_STATIC_LIBRARY_LINKER__testsuite_
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = C:\Users\dee\AppData\Local\Programs\Python\Python311\Lib\site-packages\cmake\data\bin\cmake.exe --regenerate-during-build -SZ:\hispark\ws63_2nd\src -BZ:\hispark\ws63_2nd\src\output\ws63\acore\ws63-liteos-app
+  command = C:\Users\dee\AppData\Local\Programs\Python\Python311\Lib\site-packages\cmake\data\bin\cmake.exe --regenerate-during-build -SZ:\my_github_pjt\sle_air_rocker\src -BZ:\my_github_pjt\sle_air_rocker\src\output\ws63\acore\ws63-liteos-app
   description = Re-running CMake...
   generator = 1
 

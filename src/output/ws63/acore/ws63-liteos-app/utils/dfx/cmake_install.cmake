@@ -1,4 +1,4 @@
-# Install script for directory: Z:/hispark/ws63_2nd/src/middleware/utils/dfx
+# Install script for directory: Z:/my_github_pjt/sle_air_rocker/src/middleware/utils/dfx
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,21 +34,21 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "Z:/hispark/ws63_2nd/src/tools/bin/compiler/riscv/cc_riscv32_musl_100/cc_riscv32_musl_fp_win/bin/riscv32-linux-musl-objdump.exe")
+  set(CMAKE_OBJDUMP "Z:/my_github_pjt/sle_air_rocker/src/tools/bin/compiler/riscv/cc_riscv32_musl_100/cc_riscv32_musl_fp_win/bin/riscv32-linux-musl-objdump.exe")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("Z:/hispark/ws63_2nd/src/output/ws63/acore/ws63-liteos-app/utils/dfx/dfx_reboot/cpu_utils/cmake_install.cmake")
+  include("Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/utils/dfx/dfx_reboot/cpu_utils/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("Z:/hispark/ws63_2nd/src/output/ws63/acore/ws63-liteos-app/utils/dfx/dfx_reboot/reboot/cmake_install.cmake")
+  include("Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/utils/dfx/dfx_reboot/reboot/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("Z:/hispark/ws63_2nd/src/output/ws63/acore/ws63-liteos-app/utils/dfx/diag_dfx_cmd/cmake_install.cmake")
+  include("Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/utils/dfx/diag_dfx_cmd/cmake_install.cmake")
 endif()
 

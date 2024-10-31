@@ -1,4 +1,4 @@
-# Install script for directory: Z:/hispark/ws63_2nd/src/drivers/chips/ws63/porting/sfc
+# Install script for directory: Z:/my_github_pjt/sle_air_rocker/src/drivers/chips/ws63/porting/sfc
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,21 +34,21 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "Z:/hispark/ws63_2nd/src/tools/bin/compiler/riscv/cc_riscv32_musl_100/cc_riscv32_musl_win/bin/riscv32-linux-musl-objdump.exe")
+  set(CMAKE_OBJDUMP "Z:/my_github_pjt/sle_air_rocker/src/tools/bin/compiler/riscv/cc_riscv32_musl_100/cc_riscv32_musl_win/bin/riscv32-linux-musl-objdump.exe")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("Z:/hispark/ws63_2nd/src/output/ws63/acore/ws63-flashboot/drivers/chips/ws63/porting/sfc/flash_config/cmake_install.cmake")
+  include("Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-flashboot/drivers/chips/ws63/porting/sfc/flash_config/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("Z:/hispark/ws63_2nd/src/output/ws63/acore/ws63-flashboot/drivers/chips/ws63/porting/sfc/porting/cmake_install.cmake")
+  include("Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-flashboot/drivers/chips/ws63/porting/sfc/porting/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("Z:/hispark/ws63_2nd/src/output/ws63/acore/ws63-flashboot/drivers/chips/ws63/porting/sfc/driver/cmake_install.cmake")
+  include("Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-flashboot/drivers/chips/ws63/porting/sfc/driver/cmake_install.cmake")
 endif()
 

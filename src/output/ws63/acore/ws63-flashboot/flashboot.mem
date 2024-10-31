@@ -39,8 +39,8 @@
                   libgcc2                         1288
 
     Z:                                 36020
-      hispark                               
-        ws63_2nd                            
+      my_github_pjt                         
+        sle_air_rocker                      
           src                               
             drivers                    14100
               chips                     3988
@@ -298,8 +298,8 @@
                     osal_interrupt                  10
 
     z:                                    10
-      hispark                               
-        ws63_2nd                            
+      my_github_pjt                         
+        sle_air_rocker                      
           src                               
             tools                           
               bin                           
@@ -321,8 +321,8 @@
   .text.entry                            296
 
     Z:                                      
-      hispark                               
-        ws63_2nd                            
+      my_github_pjt                         
+        sle_air_rocker                      
           src                               
             drivers                         
               chips                         
@@ -339,8 +339,8 @@
   .bss                                  1392
 
     Z:                                      
-      hispark                               
-        ws63_2nd                            
+      my_github_pjt                         
+        sle_air_rocker                      
           src                               
             middleware                   701
               utils                      573
@@ -463,8 +463,8 @@
   .data                                  421
 
     Z:                                      
-      hispark                               
-        ws63_2nd                            
+      my_github_pjt                         
+        sle_air_rocker                      
           src                               
             drivers                      369
               chips                      121
@@ -543,8 +543,8 @@
   preserve                               252
 
     Z:                                      
-      hispark                               
-        ws63_2nd                            
+      my_github_pjt                         
+        sle_air_rocker                      
           src                               
             middleware                      
               utils                         

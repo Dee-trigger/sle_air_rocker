@@ -3,7 +3,7 @@ set(CMAKE_HOST_SYSTEM_NAME "Windows")
 set(CMAKE_HOST_SYSTEM_VERSION "10.0.22631")
 set(CMAKE_HOST_SYSTEM_PROCESSOR "AMD64")
 
-include("Z:/hispark/ws63_2nd/src/build/toolchains/riscv32_musl_100.cmake")
+include("Z:/my_github_pjt/sle_air_rocker/src/build/toolchains/riscv32_musl_100.cmake")
 
 set(CMAKE_SYSTEM "Generic")
 set(CMAKE_SYSTEM_NAME "Generic")
