@@ -1,0 +1,19 @@
+{
+    "files.associations": {
+        "adc_porting.h": "c",
+        "adc.h": "c",
+        "uart.h": "c",
+        "sle_uart_client.h": "c",
+        "cmsis_os2.h": "c",
+        "typeindex": "c",
+        "typeinfo": "c",
+        "gpio.h": "c",
+        "test_suite_log.h": "c",
+        "watchdog.h": "c",
+        "array": "c",
+        "string": "c",
+        "string_view": "c",
+        "hal_gpio.h": "c",
+        "sle_ssap_client.h": "c"
+    }
+}

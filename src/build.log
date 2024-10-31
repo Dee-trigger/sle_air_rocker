@@ -1,0 +1,319 @@
+warning: the int symbol LFS_PARTITION_ID (defined at middleware/chips/ws63/Kconfig:105) has a non-int default 0x21 (undefined)
+warning: default on the choice symbol MIDDLEWARE_SUPPORT_UPG_COMPRESS (defined at middleware/chips/ws63/Kconfig:52) will have no effect, as defaults do not affect choice symbols
+warning: default on the choice symbol MIDDLEWARE_SUPPORT_UPG_AB (defined at middleware/chips/ws63/Kconfig:59) will have no effect, as defaults do not affect choice symbols
+warning: default on the choice symbol MIDDLEWARE_SUPPORT_EXCEPT_REBOOT (defined at middleware/chips/ws63/Kconfig:85) will have no effect, as defaults do not affect choice symbols
+warning: default on the choice symbol MIDDLEWARE_SUPPORT_EXCEPT_WAITFOREVER (defined at middleware/chips/ws63/Kconfig:91) will have no effect, as defaults do not affect choice symbols
+
+
+[1/17] Generating NV_SRC
+
+
+[2/17] Building C object application/samples/CMakeFiles/samples.dir/peripheral/rocker2/client_main.c.obj
+
+
+[3/17] Linking C static library application\samples\libsamples.a
+
+
+[4/17] Linking C executable ws63-liteos-app.elf
+
+
+Memory region         Used Size  Region Size  %age Used
+             ROM:          0 GB       268 KB      0.00%
+            ITCM:       12896 B        16 KB     78.71%
+            DTCM:       14836 B        16 KB     90.55%
+            SRAM:      188672 B     548608 B     34.39%
+PRESERVE_SHARE_MEM:         252 B        256 B     98.44%
+ PROGRAM_STARTUP:         476 B         1 KB     46.48%
+         PROGRAM:     1249832 B    2095360 B     59.65%
+[5/17] cmd.exe /C "cd /D Z:\hispark\ws63_2nd\src\output\ws63\acore\ws63-liteos-app && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-nm.exe -S -n --format=sysv ws63-liteos-app.elf > ws63-liteos-app.nm"
+
+
+[6/17] post_build:gen rom and ram bin file
+
+
+[7/17] cmd.exe /C "cd /D Z:\hispark\ws63_2nd\src\output\ws63\acore\ws63-liteos-app && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-objcopy.exe -O ihex ws63-liteos-app.elf ws63-liteos-app_std.hex"
+
+
+[8/17] cmd.exe /C "cd /D Z:\hispark\ws63_2nd\src\output\ws63\acore\ws63-liteos-app && C:\Users\dee\AppData\Local\Programs\Python\Python311\python.exe Z:/hispark/ws63_2nd/src/build/script/utils/create_hex.py ws63-liteos-app_rom.bin ws63-liteos-app_rom.hex"
+
+
+[9/17] update nv bin
+
+
+build nv bin success!!
+[10/17] cmd.exe /C "cd /D Z:\hispark\ws63_2nd\src\output\ws63\acore\ws63-liteos-app && C:\Users\dee\AppData\Local\Programs\Python\Python311\python.exe Z:/hispark/ws63_2nd/src/build/script/utils/create_hex.py ws63-liteos-app.bin ws63-liteos-app.hex"
+
+
+[11/17] cmd.exe /C "cd /D Z:\hispark\ws63_2nd\src\output\ws63\acore\ws63-liteos-app && C:\Users\dee\AppData\Local\Programs\Python\Python311\python.exe Z:/hispark/ws63_2nd/src/build/script/patch/patch_riscv.py ws63-liteos-app.bin ws63-liteos-app_rom.bin ws63-liteos-app.nm Z:/hispark/ws63_2nd/src/build/config/target_config/ws63/patch_config acore ws63-liteos-app Z:/hispark/ws63_2nd/src/output/ws63/acore/ws63-liteos-app"
+
+
+Generating ws63-liteos-app.bin...
+[12/17] cmd.exe /C "cd /D Z:\hispark\ws63_2nd\src\output\ws63\acore\ws63-liteos-app && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-objdump.exe -d -m riscv ws63-liteos-app.elf > ws63-liteos-app.asm"
+
+
+[13/17] cmd.exe /C "cd /D Z:\hispark\ws63_2nd\src\output\ws63\acore\ws63-liteos-app && C:\Users\dee\AppData\Local\Programs\Python\Python311\python.exe Z:/hispark/ws63_2nd/src/build/script/codesize_statistic.py ws63-liteos-app"
+
+
+codesize statistics done
+[14/17] ws63 image sign
+type: 0
+cfg : param_bin_ecc.cfg
+
+new failed1.
+read file
+read file
+CompressFlag():::0
+Final.
+type: 1
+cfg : root_pubk.cfg
+
+open key file failed.
+FillPublicKey() failed.
+type: 0
+cfg : ssb_bin_ecc.cfg
+
+new failed1.
+read file
+read file
+CompressFlag():::0
+Final.
+type: 0
+cfg : flash_bin_ecc.cfg
+
+new failed1.
+read file
+read file
+CompressFlag():::0
+Final.
+type: 0
+cfg : flash_backup_bin_ecc.cfg
+
+new failed1.
+read file
+read file
+CompressFlag():::0
+Final.
+type: 0
+cfg : loaderboot_bin_ecc.cfg
+
+new failed1.
+read file
+read file
+CompressFlag():::0
+Final.
+type: 0
+cfg : liteos_app_bin_ecc.cfg
+
+new failed1.
+read file
+read file
+CompressFlag():::0
+Final.
+type: 0
+cfg : liteos_mfg_bin_factory_ecc.cfg
+
+new failed1.
+read file
+read file
+CompressFlag():::0
+Final.
+generate params.bin...
+Build params success!
+params.bin size:  1024
+params.bin generate successfully!!!
+params_sign.bin generate successfully!!!
+generate fill root_pubk.bin
+merge out path:  Z:\hispark\ws63_2nd\src\build\config\target_config\ws63\sign_config
+root_params_sign.bin generate successfully!!!
+sign name:  ../../../../../output/ws63/acore\ws63-ssb/ssb.bin
+../../../../../output/ws63/acore\ws63-ssb/ssb.bin size:  20800
+../../../../../output/ws63/acore\ws63-ssb/ssb.bin  generated successfully!!!
+ssb_sign.bin generated successfully!!!
+../../../../../output/ws63/acore\ws63-flashboot/flashboot.bin size:  48576
+flash_sign.bin generated successfully!!!
+sign name:  ../../../../../output/ws63/acore\ws63-loaderboot/loaderboot.bin
+../../../../../output/ws63/acore\ws63-loaderboot/loaderboot.bin size:  30592
+../../../../../output/ws63/acore\ws63-loaderboot/loaderboot.bin  generated successfully!!!
+loaderboot_sign.bin generated successfully!!!
+merge out path:  Z:\hispark\ws63_2nd\src\output\ws63\acore\boot_bin
+root_loaderboot_sign.bin generated successfully!!!
+sign name:  ../../../../../output/ws63/acore\ws63-liteos-app/ws63-liteos-app.bin
+../../../../../output/ws63/acore\ws63-liteos-app/ws63-liteos-app.bin
+
+ size:  1250856
+../../../../../output/ws63/acore\ws63-liteos-app/ws63-liteos-app.bin  generated successfully!!!
+sign name:  ../../../../../output/ws63/acore/boot_bin\ws63-liteos-mfg.bin
+../../../../../output/ws63/acore/boot_bin\ws63-liteos-mfg.bin size:  1261248
+../../../../../output/ws63/acore/boot_bin\ws63-liteos-mfg.bin  generated successfully!!!
+[15/17] cmd.exe /C "cd /D Z:\hispark\ws63_2nd\src\output\ws63\acore\ws63-liteos-app && Z:\hispark\ws63_2nd\src\tools\bin\compiler\riscv\cc_riscv32_musl_100\cc_riscv32_musl_fp_win\bin\riscv32-linux-musl-objdump.exe -x -S -l ws63-liteos-app.elf > ws63-liteos-app.lst"
+
+
+[16/17] MEM_LIMIT
+
+
+[17/17] cmd.exe /C "cd /D Z:\hispark\ws63_2nd\src\output\ws63\acore\ws63-liteos-app && C:\Users\dee\AppData\Local\Programs\Python\Python311\python.exe Z:/hispark/ws63_2nd/src/build/script/utils/elftodu.py Z:/hispark/ws63_2nd/src ws63-liteos-app.elf Z:/hispark/ws63_2nd/src/tools/bin/compiler/riscv/cc_riscv32_musl_100/cc_riscv32_musl_fp_win/bin/riscv32-linux-musl-nm.exe > ws63-liteos-app.du && C:\Users\dee\AppData\Local\Programs\Python\Python311\python.exe Z:/hispark/ws63_2nd/src/build/script/utils/mem_stats.py ws63-liteos-app.lst ws63-liteos-app.du Z:/hispark/ws63_2nd/src/output/ws63/acore/ws63-liteos-app/linker.lds ws63 > ws63-liteos-app.mem"
+
+
+ninja: no work to do.
+
+
+data size:  16
+finally size:  64
+
+
+[!][copy_files_to_interim] File `Z:\hispark\ws63_2nd\src\output/ws63/acore/ws63-loaderboot/loaderboot.bin` not found, will skip it !
+[!][copy_files_to_interim] File `Z:\hispark\ws63_2nd\src\output/ws63/acore/ws63-loaderboot/root_loaderboot_sign.bin` not found, will skip it !
+[!][copy_files_to_interim] File `Z:\hispark\ws63_2nd\src\output/ws63/acore/ws63-ssb/ssb.bin` not found, will skip it !
+[!][copy_files_to_interim] File `Z:\hispark\ws63_2nd\src\output/ws63/acore/ws63-ssb/ssb_sign.bin` not found, will skip it !
+[!][copy_files_to_interim] File `Z:\hispark\ws63_2nd\src\output/ws63/acore/ws63-liteos-hilink/ws63-liteos-hilink.bin` not found, will skip it !
+[!][copy_files_to_interim] File `Z:\hispark\ws63_2nd\src\output/ws63/acore/ws63-liteos-hilink/ws63-liteos-hilink-sign.bin` not found, will skip it !
+
+
+[*] romboot not found, codepoint files will not be one!
+
+
+current work direction:  z:\hispark\ws63_2nd\src
+NV file reading:  ./output/ws63/acore/nv_bin/temp/cfg/acore_nv.json
+nv xml writing in:  ./output/ws63/database/cco/system/hdbcfg/mss_nvi_db.xml
+[!][nv handle]warning:  ./output/ws63/database/cco/system/hdbcfg/mss_nvi_db.xml  not found!
+struct file reading:  ./output/ws63/acore/nv_bin/temp/acore.etypes
+struct writing in: ./output/ws63/database/cco/system/nv/nv_struct_def.txt
+[!][nv handle]warning:  ./output/ws63/database/cco/system/nv/nv_struct_def.txt  not found!
+
+
+['Z:\\hispark\\ws63_2nd\\src\\output\\ws63\\acore\\boot_bin\\root_loaderboot_sign.bin', 'Z:\\hispark\\ws63_2nd\\src\\output\\ws63\\acore\\param_bin\\root_params_sign.bin', 'Z:\\hispark\\ws63_2nd\\src\\output\\ws63\\acore\\boot_bin\\ssb_sign.bin', 'Z:\\hispark\\ws63_2nd\\src\\output\\ws63\\acore\\boot_bin\\flashboot_sign.bin', 'Z:\\hispark\\ws63_2nd\\src\\output\\ws63\\acore\\boot_bin\\flashboot_backup_sign.bin', 'Z:\\hispark\\ws63_2nd\\src\\output\\ws63\\acore\\nv_bin\\ws63_all_nv.bin', 'Z:\\hispark\\ws63_2nd\\src\\output\\ws63\\acore\\nv_bin\\ws63_all_nv_backup.bin', 'Z:\\hispark\\ws63_2nd\\src\\output\\ws63\\acore\\ws63-liteos-app\\ws63-liteos-app-sign.bin']
+[0, 2097152, 2105344, 2228224, 2162688, 6275072, 2146304, 2293760]
+[2097152, 1920, 21568, 49344, 49344, 16384, 16384, 1251648]
+[31488, 1920, 21568, 49344, 49344, 4096, 4096, 1251648]
+[0, 1, 1, 1, 1, 1, 1, 1]
+['Z:\\hispark\\ws63_2nd\\src\\output\\ws63\\acore\\boot_bin\\root_loaderboot_sign.bin', 'Z:\\hispark\\ws63_2nd\\src\\output\\ws63\\acore\\ws63-liteos-app\\ws63-liteos-app-sign.bin']
+[0, 2293760]
+[2097152, 1251648]
+[31488, 1251648]
+[0, 1]
+
+
+python path:  C:\Users\dee\AppData\Local\Programs\Python\Python311\python.exe
+[ws63][acore] run custom cmd success!
+Z:\hispark\ws63_2nd\src\build\script\.\..\..\config.in
+z:\hispark\ws63_2nd\src
+No change to Kconfig header in 'Z:\hispark\ws63_2nd\src\output\ws63\acore\ws63-liteos-app\mconfig.h'
+[]
+######### Build target:ws63_liteos_app success
+ws63-liteos-app takes 19.417176 s
+python path:  C:\Users\dee\AppData\Local\Programs\Python\Python311\python.exe
+generate_efuse_bin ing...
+['C:\\Users\\dee\\AppData\\Local\\Programs\\Python\\Python311\\python.exe', 'Z:\\hispark\\ws63_2nd\\src\\build\\config\\target_config\\ws63\\script\\efuse_cfg_gen.py']
+generate_efuse_bin done!
+copy_files_to_interim ing...
+['C:\\Users\\dee\\AppData\\Local\\Programs\\Python\\Python311\\python.exe', 'Z:\\hispark\\ws63_2nd\\src\\build\\config\\target_config\\ws63\\script\\copy_files_to_interim.py', 'Z:\\hispark\\ws63_2nd\\src']
+copy_files_to_interim done!
+generate rom_in_one ing...
+['C:\\Users\\dee\\AppData\\Local\\Programs\\Python\\Python311\\python.exe', 'Z:\\hispark\\ws63_2nd\\src\\build\\config\\target_config\\ws63\\script\\rom_in_one.py', 'Z:\\hispark\\ws63_2nd\\src', 'ws63-liteos-app']
+generate rom_in_one done!
+['C:\\Users\\dee\\AppData\\Local\\Programs\\Python\\Python311\\python.exe', 'Z:\\hispark\\ws63_2nd\\src\\build\\config\\target_config\\ws63\\script\\nv_handle.py']
+[ws63][acore] run custom cmd success!
+packet ing...
+['C:\\Users\\dee\\AppData\\Local\\Programs\\Python\\Python311\\python.exe', 'Z:\\hispark\\ws63_2nd\\src\\tools\\pkg\\packet.py', 'ws63', 'ws63-liteos-app', '']
+packet success!
+
+
+INFO:root:++++++++++++++++++++++++start stackAnalyzer++++++++++++++++++++++++
+
+
+INFO:root:elf_path:./output/ws63/acore/ws63-liteos-app/ws63-liteos-app.elf
+INFO:root:compiler_path:e:\HiSpark Studio\tools\Windows\cc_riscv32_musl_fp_win\bin
+INFO:root:asm_path:./output/ws63/acore/ws63-liteos-app/ws63-liteos-app.asm
+INFO:root:prefix:riscv32-linux-musl
+INFO:root:environment:windows
+
+
+INFO:root:stack_mode:2
+
+
+INFO:root:stack_rec_stats:1
+
+
+INFO:root:compiler prefix: riscv32-linux-musl
+
+
+INFO:root:++++++++++++++++++++++++end stackAnalyzer++++++++++++++++++++++++
+
+
+INFO:root:++++++++++++++++++++++++++++++start buildAnalyzer++++++++++++++++++++++++++++++
+
+
+INFO:root:elf_path:                               ./output/ws63/acore/ws63-liteos-app/ws63-liteos-app.elf
+
+
+INFO:root:map_path:                               ./output/ws63/acore/ws63-liteos-app/ws63-liteos-app.map
+INFO:root:compiler_path:                          e:\HiSpark Studio\tools\Windows\cc_riscv32_musl_fp_win\bin
+
+
+INFO:root:build_config_path:                      None                                    
+INFO:root:prefix:                                 riscv32-linux-musl                      
+INFO:root:environment:                            windows                                 
+
+
+INFO:root:undef_addr_sections:                    ['.debug_info', '.debug_abbrev', '.debug_loc', '.debug_aranges', '.debug_ranges', '.debug_line', '.debug_str', '.comment', '.riscv.attributes', '.debug_frame']
+
+
+INFO:root:no_size_sections:                       ['.plat_romtext', '.wifi_romtext', '.btc_romtext', '.bth_romtext', '.bth_romdata', '.plat_rombss', '.plat_text_tcm', '.wifi_text_tcm', '.plat_data_tcm', '.wifi_text_sram', '.btc_text_sram', '.bth_text_sram', '.wifi_data_sram', '.btc_data_sram', '.bth_data_sram', '.heap']
+INFO:root:analysis sections:                      ['.text', '.data', '.bss', 'startup', '.sysintcall.init', '.patch', '.rom_ram_cb_text', '.plat_romdata', '.wifi_romdata', '.btc_romdata', '.bth_rombss', '.wifi_pkt_ram', '.btc_text_tcm', '.patch_on_tcm', '.btc_data_tcm', '.wifi_data_tcm', '.btc_bss_tcm', '.wifi_bss_tcm', '.plat_text_sram', '.patch_on_sram', '.plat_text_flash', '.wifi_text_flash', '.patch_on_flash', '.btc_text_flash', '.bth_text_flash', '.radar_text_flash', '.radar_ai_text_flash', '.btc_data_flash', '.bth_data_flash', '.plat_bss_sram', '.plat_bss_flash', '.wifi_bss_flash', '.radar_bss_flash', '.radar_ai_bss_flash', '.btc_bss_flash', '.bth_bss_flash', '.preserve', '.stacks']
+
+
+INFO:root:--------------------Load Sections:--------------------
+
+
+INFO:root:section_name                            section_size                            
+INFO:root:startup                                 424                                     
+INFO:root:.sysintcall.init                        52                                      
+INFO:root:.patch                                  2344                                    
+INFO:root:.rom_ram_cb_text                        1816                                    
+INFO:root:.plat_romdata                           212                                     
+INFO:root:.wifi_romdata                           98                                      
+INFO:root:.btc_romdata                            672                                     
+INFO:root:.btc_text_tcm                           7206                                    
+INFO:root:.patch_on_tcm                           1528                                    
+
+
+INFO:root:.btc_data_tcm                           57                                      
+INFO:root:.wifi_data_tcm                          3408                                    
+
+
+INFO:root:.plat_text_sram                         10948                                   
+INFO:root:.patch_on_sram                          2520                                    
+INFO:root:.plat_text_flash                        177332                                  
+
+
+INFO:root:.wifi_text_flash                        585358                                  
+
+
+INFO:root:.patch_on_flash                         1908                                    
+
+
+INFO:root:.btc_text_flash                         131560                                  
+
+
+INFO:root:.bth_text_flash                         233310                                  
+INFO:root:.radar_text_flash                       32012                                   
+
+
+INFO:root:.radar_ai_text_flash                    5868                                    
+
+
+INFO:root:.text                                   43936                                   
+
+
+INFO:root:.btc_data_flash                         4896                                    
+
+
+INFO:root:.bth_data_flash                         2382                                    
+INFO:root:.data                                   416                                     
+INFO:root:total_size:                             1250263                                 
+INFO:root:------------------------------------------------------
+
+
+INFO:root:++++++++++++++++++++++++++++++end buildAnalyzer++++++++++++++++++++++++++++++
+
+
