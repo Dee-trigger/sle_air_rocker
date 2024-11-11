@@ -57,7 +57,7 @@
 //*************************************************************************test start
 static uint8_t g_app_uart_rx_buff[SLE_UART_TRANSFER_SIZE] = { 0 };//接受栈
 static uint8_t sle_tx_buff[18] = { 0 };
-static uint8_t test[]="haode1234";
+//static uint8_t test[]="haode1234";
 
 static uart_buffer_config_t g_app_uart_buffer_config = {//接收配置
     .rx_buffer = g_app_uart_rx_buff,
@@ -164,21 +164,23 @@ void adc_callback(uint8_t ch, uint32_t *buffer, uint32_t length, bool *next)//ad
     uint32_t  x_one_i=0, x_ten_i=0, x_hundred_i=0, x_thousand_i=0,
               y_one_i=0, y_ten_i=0, y_hundred_i=0, y_thousand_i=0;
      UNUSED(next);
+     UNUSED(length);
 
      
-    for (uint32_t i = 0; i < length; i++) {
+/*     for (uint32_t i = 0; i < length; i++) {
         if(abs(buffer[i])>50){
             osal_msleep(5);
             if(abs(buffer[i])>50)
                 printf("channel: %d, voltage: %dmv\r\n", ch, buffer[i]);
-            else return ;
+            
         }
-    } 
-    if(ch=='1'){
-     x_one_i=(*buffer)%10;
-     x_ten_i=((*buffer)/10)%10;
-     x_hundred_i=((*buffer)/100)%10;
-     x_thousand_i=(*buffer)/1000;
+    }  */
+if(abs(buffer[1])>50){
+    if(ch==0){
+     x_one_i=(buffer[1])%10;
+     x_ten_i=((buffer[1])/10)%10;
+     x_hundred_i=((buffer[1])/100)%10;
+     x_thousand_i=(buffer[1])/1000;
 
      x_one_r='0' +  x_one_i;
      x_ten_r='0' + x_ten_i ;
@@ -186,17 +188,18 @@ void adc_callback(uint8_t ch, uint32_t *buffer, uint32_t length, bool *next)//ad
      x_thousand_r='0' +  x_thousand_i;
      printf("teat_channel: %d, voltage: %d %d %d %dmv\r\n", ch,x_thousand_i, x_hundred_i,x_ten_i,x_one_i);
     }
-    else
+    else if(ch==1)
     {
-     y_one_i=(*buffer)%10;
-     y_ten_i=((*buffer)/10)%10;
-     y_hundred_i=((*buffer)/100)%10;
-     y_thousand_i=(*buffer)/1000;
+     y_one_i=(buffer[1])%10;
+     y_ten_i=((buffer[1])/10)%10;
+     y_hundred_i=((buffer[1])/100)%10;
+     y_thousand_i=(buffer[1])/1000;
 
      y_one_r='0' +  y_one_i;
      y_ten_r='0' + y_ten_i ;
      y_hundred_r='0' +  y_hundred_i;
      y_thousand_r='0' +  y_thousand_i;
+     printf("teat_channel: %d, voltage: %d %d %d %dmv\r\n", ch,y_thousand_i, y_hundred_i,y_ten_i,y_one_i);
     }
 
     sle_tx_buff[0]='1';
@@ -217,7 +220,7 @@ void adc_callback(uint8_t ch, uint32_t *buffer, uint32_t length, bool *next)//ad
     sle_uart_send_param->data = test;
     ssapc_write_req(0, g_sle_uart_conn_id, sle_uart_send_param); */
     
-
+}
 
 
 }
@@ -267,19 +270,20 @@ static void *sle_client_task(const char *arg)//sle线程任务
 
     sle_uart_client_init(sle_uart_notification_cb, sle_uart_indication_cb);//sle 回调函数注册兼调用
     osal_mdelay(2000);
-    
+    printf("*********************just threat restarted*******************************88");
     if (ret != ERRCODE_SUCC) {
         osal_printk("Register uart callback fail.");
         return NULL;
     }
-   while(1){
-     osal_printk("sle start send");
+   while(1){//发送
+     osal_printk("sle start send\r\n");
     ssapc_write_param_t *sle_uart_send_param = get_g_sle_uart_send_param();
     uint16_t g_sle_uart_conn_id = get_g_sle_uart_conn_id();
-    sle_uart_send_param->data_len = 9;
-    sle_uart_send_param->data = test;
+    sle_uart_send_param->data_len = 18;
+    sle_uart_send_param->data =sle_tx_buff;
     ssapc_write_req(0, g_sle_uart_conn_id, sle_uart_send_param);
-    osal_printk("sle end send");
+    osal_mdelay(500);
+    osal_printk("sle end send\r\n");
    }
     return NULL;
 }
@@ -322,7 +326,7 @@ static void *button_task(const char *arg)//gpio 任务
     return NULL;
 }
 static void sle_entry(void)//sle入口函数
-{
+{  printf("*********************l had restarted*******************************88");
     osal_task *sle_task_handle = NULL;
     osal_kthread_lock();
 
