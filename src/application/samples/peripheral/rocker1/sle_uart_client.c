@@ -299,7 +299,7 @@ void sle_uart_client_low_latency_recv_data_cbk_register(void)
 
 void sle_uart_client_init(ssapc_notification_callback notification_cb, ssapc_indication_callback indication_cb)
 {
-    (void)osal_msleep(5000); /* 延时5000ms，等待SLE初始化完毕 */
+    (void)osal_msleep(1000); /* 延时5000ms，等待SLE初始化完毕 *///有大病？
     osal_printk("[SLE Client] try enable.\r\n");
     sle_uart_client_sample_seek_cbk_register();//注册设备公开和设备发现回调函数
     sle_uart_client_sample_connect_cbk_register();

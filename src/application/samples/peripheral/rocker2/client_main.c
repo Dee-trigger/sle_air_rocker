@@ -326,7 +326,7 @@ static void sle_entry(void)//sle入口函数
     osal_task *sle_task_handle = NULL;
     osal_kthread_lock();
 
-
+  
     sle_task_handle = osal_kthread_create((osal_kthread_handler)sle_client_task, 0, "SLEUartDongleTask",
                                       SLE_UART_TASK_STACK_SIZE);
    
