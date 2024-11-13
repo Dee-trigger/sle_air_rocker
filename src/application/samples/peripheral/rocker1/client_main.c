@@ -54,9 +54,18 @@
 #define BUTTON_TASK_PRIO 17
 
 #define BUTTON_TASK_STACK_SIZE 0x1000
+
+#define ROCK1 '0'
+
+#define ADC_VAL '0'
+#define X_VAL '0'
+#define Y_VAL '1'
+
+#define GPIO_VAL '1'
+
 //*************************************************************************test start
 static uint8_t g_app_uart_rx_buff[SLE_UART_TRANSFER_SIZE] = { 0 };//接受栈
-static uint8_t sle_tx_buff[18] = { 0 };
+//static uint8_t sle_tx_buff[18] = { 0 };
 //static uint8_t test[]="haode1234";
 
 static uart_buffer_config_t g_app_uart_buffer_config = {//接收配置
@@ -98,28 +107,33 @@ static void gpio_callback_func(pin_t pin, uintptr_t param)
     UNUSED(pin);
     UNUSED(param);
     uint32_t pin_i=(uint32_t)pin;
+
+    uint8_t cmd_gpio[7]={ROCK1,GPIO_VAL,'0','0','0','0','0'};
+
    if (uapi_gpio_get_val(pin)==1)
    {  osal_mdelay(5);
         if (uapi_gpio_get_val(pin)==1)//消抖
         {
-    osal_printk(" %d pressed.\r\n",pin_i);
-    if(pin_i==POS_UP_GPIO)sle_tx_buff[9]='1';else sle_tx_buff[9]='0';
-    if(pin_i==POS_DOWN_GPIO)sle_tx_buff[10]='1';else sle_tx_buff[10]='0';
-    if(pin_i==POS_LEFT_GPIO)sle_tx_buff[11]='1';else sle_tx_buff[11]='0';
-    if(pin_i==POS_RIGHT_GPIO)sle_tx_buff[12]='1';else sle_tx_buff[12]='0';
-    if(pin_i==TRIGGER_GPIO)sle_tx_buff[13]='1';else sle_tx_buff[13]='0';
-    if(pin_i==KEY1_GPIO)sle_tx_buff[14]='1';else sle_tx_buff[14]='0';
-    if(pin_i==KEY2_GPIO)sle_tx_buff[15]='1';else sle_tx_buff[15]='0';
-    if(pin_i==KEY3_GPIO)sle_tx_buff[16]='1';else sle_tx_buff[16]='0';
-    if(pin_i==POS_UP_GPIO)sle_tx_buff[17]='1';else sle_tx_buff[17]='0';
-    /* ssapc_write_param_t *sle_uart_send_param = get_g_sle_uart_send_param();
-    uint16_t g_sle_uart_conn_id = get_g_sle_uart_conn_id();
-    sle_uart_send_param->data_len = 9;
-    sle_uart_send_param->data = test;
-    ssapc_write_req(0, g_sle_uart_conn_id, sle_uart_send_param);
-    for (int i =0; i <18; i++) {  //清零
-         printf("%c",sle_tx_buff[i]);
-         sle_tx_buff[i] = '0';   }*/
+            osal_printk(" %d pressed.\r\n",pin_i);
+
+        /*  if(pin_i==POS_UP_GPIO)sle_tx_buff[9]='1';else sle_tx_buff[9]='0';
+            if(pin_i==POS_DOWN_GPIO)sle_tx_buff[10]='1';else sle_tx_buff[10]='0';
+            if(pin_i==POS_LEFT_GPIO)sle_tx_buff[11]='1';else sle_tx_buff[11]='0';
+            if(pin_i==POS_RIGHT_GPIO)sle_tx_buff[12]='1';else sle_tx_buff[12]='0';
+            if(pin_i==TRIGGER_GPIO)sle_tx_buff[13]='1';else sle_tx_buff[13]='0';
+            if(pin_i==KEY1_GPIO)sle_tx_buff[14]='1';else sle_tx_buff[14]='0';
+            if(pin_i==KEY2_GPIO)sle_tx_buff[15]='1';else sle_tx_buff[15]='0';
+            if(pin_i==KEY3_GPIO)sle_tx_buff[16]='1';else sle_tx_buff[16]='0';
+            if(pin_i==POS_UP_GPIO)sle_tx_buff[17]='1';else sle_tx_buff[17]='0'; */
+
+            cmd_gpio[2]='0'+pin_i;
+            
+            ssapc_write_param_t *sle_uart_send_param = get_g_sle_uart_send_param();
+            uint16_t g_sle_uart_conn_id = get_g_sle_uart_conn_id();
+            sle_uart_send_param->data_len = 3;
+            sle_uart_send_param->data = cmd_gpio;
+            ssapc_write_req(0, g_sle_uart_conn_id, sle_uart_send_param);
+            
         }
    }
     
@@ -166,64 +180,72 @@ void adc_callback(uint8_t ch, uint32_t *buffer, uint32_t length, bool *next)//ad
      UNUSED(next);
      UNUSED(length);
 
-     
-/*     for (uint32_t i = 0; i < length; i++) {
-        if(abs(buffer[i])>50){
-            osal_msleep(5);
-            if(abs(buffer[i])>50)
-                printf("channel: %d, voltage: %dmv\r\n", ch, buffer[i]);
-            
+    uint8_t cmd_adc[7]={ROCK1,ADC_VAL,'0','0','0','0','0'};
+
+    
+        if(ch==0)
+        {
+            if(abs(buffer[1])>50){
+            x_one_i=(buffer[1])%10;
+            x_ten_i=((buffer[1])/10)%10;
+            x_hundred_i=((buffer[1])/100)%10;
+            x_thousand_i=(buffer[1])/1000;
+
+            x_one_r='0' +  x_one_i;
+            x_ten_r='0' + x_ten_i ;
+            x_hundred_r='0' +  x_hundred_i;
+            x_thousand_r='0' +  x_thousand_i;
+            cmd_adc[2]=X_VAL;
+            cmd_adc[3]=x_thousand_r;
+            cmd_adc[4]=x_hundred_r;
+            cmd_adc[5]=x_ten_r;
+            cmd_adc[6]=x_one_r;
+            printf("teat_channel: %d, voltage: %d %d %d %dmv\r\n", ch,x_thousand_i, x_hundred_i,x_ten_i,x_one_i);
+            }
         }
-    }  */
-if(abs(buffer[1])>50){
-    if(ch==0){
-     x_one_i=(buffer[1])%10;
-     x_ten_i=((buffer[1])/10)%10;
-     x_hundred_i=((buffer[1])/100)%10;
-     x_thousand_i=(buffer[1])/1000;
+        else if(ch==1)
+        {
+        if(abs(buffer[1])>50){
+        y_one_i=(buffer[1])%10;
+        y_ten_i=((buffer[1])/10)%10;
+        y_hundred_i=((buffer[1])/100)%10;
+        y_thousand_i=(buffer[1])/1000;
 
-     x_one_r='0' +  x_one_i;
-     x_ten_r='0' + x_ten_i ;
-     x_hundred_r='0' +  x_hundred_i;
-     x_thousand_r='0' +  x_thousand_i;
-     printf("teat_channel: %d, voltage: %d %d %d %dmv\r\n", ch,x_thousand_i, x_hundred_i,x_ten_i,x_one_i);
-    }
-    else if(ch==1)
-    {
-     y_one_i=(buffer[1])%10;
-     y_ten_i=((buffer[1])/10)%10;
-     y_hundred_i=((buffer[1])/100)%10;
-     y_thousand_i=(buffer[1])/1000;
+        y_one_r='0' +  y_one_i;
+        y_ten_r='0' + y_ten_i ;
+        y_hundred_r='0' +  y_hundred_i;
+        y_thousand_r='0' +  y_thousand_i;
+            cmd_adc[2]=Y_VAL;
+            cmd_adc[3]=y_thousand_r;
+            cmd_adc[4]=y_hundred_r;
+            cmd_adc[5]=y_ten_r;
+            cmd_adc[6]=y_one_r;
+        printf("teat_channel: %d, voltage: %d %d %d %dmv\r\n", ch,y_thousand_i, y_hundred_i,y_ten_i,y_one_i);
+        }
+        }
 
-     y_one_r='0' +  y_one_i;
-     y_ten_r='0' + y_ten_i ;
-     y_hundred_r='0' +  y_hundred_i;
-     y_thousand_r='0' +  y_thousand_i;
-     printf("teat_channel: %d, voltage: %d %d %d %dmv\r\n", ch,y_thousand_i, y_hundred_i,y_ten_i,y_one_i);
-    }
+/*         sle_tx_buff[0]='1';
 
-    sle_tx_buff[0]='1';
+        sle_tx_buff[1]=x_thousand_r;
+        sle_tx_buff[2]=x_hundred_r;
+        sle_tx_buff[3]=x_ten_r;
+        sle_tx_buff[4]=x_one_r;
 
-    sle_tx_buff[1]=x_thousand_r;
-    sle_tx_buff[2]=x_hundred_r;
-    sle_tx_buff[3]=x_ten_r;
-    sle_tx_buff[4]=x_one_r;
+        sle_tx_buff[5]=y_thousand_r;
+        sle_tx_buff[6]=y_hundred_r;
+        sle_tx_buff[7]=y_ten_r;
+        sle_tx_buff[8]=y_one_r; */
 
-    sle_tx_buff[5]=y_thousand_r;
-    sle_tx_buff[6]=y_hundred_r;
-    sle_tx_buff[7]=y_ten_r;
-    sle_tx_buff[8]=y_one_r;
-
-    /* ssapc_write_param_t *sle_uart_send_param = get_g_sle_uart_send_param();
-    uint16_t g_sle_uart_conn_id = get_g_sle_uart_conn_id();
-    sle_uart_send_param->data_len = 9;
-    sle_uart_send_param->data = test;
-    ssapc_write_req(0, g_sle_uart_conn_id, sle_uart_send_param); */
+        ssapc_write_param_t *sle_uart_send_param = get_g_sle_uart_send_param();
+        uint16_t g_sle_uart_conn_id = get_g_sle_uart_conn_id();
+        sle_uart_send_param->data_len = 7;
+        sle_uart_send_param->data = cmd_adc;
+        ssapc_write_req(0, g_sle_uart_conn_id, sle_uart_send_param); 
     
 }
 
 
-}
+
 
 void sle_uart_notification_cb(uint8_t client_id, uint16_t conn_id, ssapc_handle_value_t *data,
     errcode_t status)//sle通知回调
@@ -275,16 +297,24 @@ static void *sle_client_task(const char *arg)//sle线程任务
         osal_printk("Register uart callback fail.");
         return NULL;
     }
-   while(1){//发送
-     osal_printk("sle start send\r\n");
+  /*  for(int k=0;k<5;k++)
+   {
+    osal_printk("sle start send\r\n");
     ssapc_write_param_t *sle_uart_send_param = get_g_sle_uart_send_param();
     uint16_t g_sle_uart_conn_id = get_g_sle_uart_conn_id();
-    sle_uart_send_param->data_len = 18;
-    sle_uart_send_param->data =sle_tx_buff;
+    sle_uart_send_param->data_len = 10;
+    sle_uart_send_param->data =test;
     ssapc_write_req(0, g_sle_uart_conn_id, sle_uart_send_param);
     osal_mdelay(500);
     osal_printk("sle end send\r\n");
+   } */
+   while (1)
+   {
+     uapi_watchdog_kick(); // 没事干就喂狗
+       osal_mdelay(1000);
    }
+   
+   
     return NULL;
 }
 static void *adc_task(const char *arg)//adc线程任务
@@ -298,14 +328,14 @@ static void *adc_task(const char *arg)//adc线程任务
         .freq = 1,
         
     };
-     osal_mdelay(2000);
+     osal_mdelay(500);
     while (1)
     {
         uapi_adc_auto_scan_ch_enable(X_POS, config, adc_callback);
         uapi_adc_auto_scan_ch_disable(X_POS);
         uapi_adc_auto_scan_ch_enable(Y_POS, config, adc_callback);
         uapi_adc_auto_scan_ch_disable(Y_POS);
-        //osal_msleep(ADC_AUTO_SAMPLE_TEST_TIMES);
+        osal_msleep(50);
     }
     
     return NULL;
@@ -321,16 +351,16 @@ static void *button_task(const char *arg)//gpio 任务
 
     while (1) {
         uapi_watchdog_kick(); // 没事干就喂狗
-       
-    }
+       osal_mdelay(1000);
+    } 
     return NULL;
 }
 static void sle_entry(void)//sle入口函数
-{  printf("*********************l had restarted*******************************88");
+{
     osal_task *sle_task_handle = NULL;
     osal_kthread_lock();
 
-
+  
     sle_task_handle = osal_kthread_create((osal_kthread_handler)sle_client_task, 0, "SLEUartDongleTask",
                                       SLE_UART_TASK_STACK_SIZE);
    
@@ -384,6 +414,8 @@ static void main_entry(void)
    adc_entry();
    
    button_entry();
+   
+   
 }
 /* Run the sle_uart_entry. */
 app_run(main_entry);
