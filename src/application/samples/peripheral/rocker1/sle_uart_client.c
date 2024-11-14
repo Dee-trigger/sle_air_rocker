@@ -298,7 +298,7 @@ void sle_uart_client_low_latency_recv_data_cbk_register(void)
 #endif
 
 void sle_uart_client_init(ssapc_notification_callback notification_cb, ssapc_indication_callback indication_cb)
-{
+{  uint32_t ret=0;
     (void)osal_msleep(1000); /* 延时5000ms，等待SLE初始化完毕 *///有大病？
     osal_printk("[SLE Client] try enable.\r\n");
     sle_uart_client_sample_seek_cbk_register();//注册设备公开和设备发现回调函数
@@ -307,7 +307,8 @@ void sle_uart_client_init(ssapc_notification_callback notification_cb, ssapc_ind
 #ifdef CONFIG_SAMPLE_SUPPORT_LOW_LATENCY_TYPE
     sle_uart_client_low_latency_recv_data_cbk_register();
 #endif
-    if (enable_sle() != ERRCODE_SUCC) {
-        osal_printk("[SLE Client] sle enbale fail !\r\n");
+    ret=enable_sle();
+    if (ret!= ERRCODE_SUCC) {
+        osal_printk("[SLE Client] sle enbale fail! : %d\r\n",ret);
     }
 }

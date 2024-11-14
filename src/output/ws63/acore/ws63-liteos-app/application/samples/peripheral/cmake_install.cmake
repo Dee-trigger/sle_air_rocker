@@ -39,6 +39,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/application/samples/peripheral/rocker_rec/cmake_install.cmake")
+  include("Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/application/samples/peripheral/rocker1/cmake_install.cmake")
 endif()
 

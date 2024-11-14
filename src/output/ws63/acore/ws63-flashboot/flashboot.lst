@@ -29015,7 +29015,7 @@ SecNumberCompatZero():
 Z:\my_github_pjt\sle_air_rocker\src\output\ws63\acore\ws63-flashboot/../../../../open_source/libboundscheck/src/output.inl:1446
         attr->text.str = strNullPointer;
   a30a9e:	00a3 3f7c 0c1f      	l.li	s8,0xa33f7c
-SecNumber64ToDecString():
+SecNumberToString():
 Z:\my_github_pjt\sle_air_rocker\src\output\ws63\acore\ws63-flashboot/../../../../open_source/libboundscheck/src/output.inl:394
         *(attr->text.str) = g_itoaLowerDigits[val64 % SECUREC_RADIX_DECIMAL];
   a30aa4:	00a3 3c58 091f      	l.li	s2,0xa33c58
@@ -30142,7 +30142,7 @@ Z:\my_github_pjt\sle_air_rocker\src\output\ws63\acore\ws63-flashboot/../../../..
                             num64 = SECUREC_GET_SIZE_FROM_ARG(formatAttr);
   a310c8:	8dbe                	mv	s11,a5
   a310ca:	b7d1                	j	a3108e <SecOutput+0x634>
-SecNumber32ToString():
+SecNumberToString():
 Z:\my_github_pjt\sle_air_rocker\src\output\ws63\acore\ws63-flashboot/../../../../open_source/libboundscheck/src/output.inl:273
     switch (attr->radix) {
   a310cc:	100789bb          	beqi	a5,16,a310f2 <SecOutput+0x698>

@@ -1,7 +1,7 @@
 /* Copyright (c) HiSilicon (Shanghai) Technologies Co., Ltd. 2022-2022. All rights reserved. */
 #define CONFIG_SAMPLE_ENABLE 1
 #define CONFIG_ENABLE_PERIPHERAL_SAMPLE 1
-#define CONFIG_SAMPLE_SUPPORT_ROCKER_REC 1
+#define CONFIG_SAMPLE_SUPPORT_ROCKER1 1
 #define CONFIG_CHIP_WS63 1
 #define CONFIG_BGLE_RAM_SIZE_32K 1
 #define CONFIG_RADAR_SENSOR_RX_MEM_8K 1

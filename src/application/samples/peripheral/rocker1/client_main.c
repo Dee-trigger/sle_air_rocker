@@ -130,10 +130,10 @@ static void gpio_callback_func(pin_t pin, uintptr_t param)
             
             ssapc_write_param_t *sle_uart_send_param = get_g_sle_uart_send_param();
             uint16_t g_sle_uart_conn_id = get_g_sle_uart_conn_id();
-            sle_uart_send_param->data_len = 3;
+            sle_uart_send_param->data_len = 7;
             sle_uart_send_param->data = cmd_gpio;
             ssapc_write_req(0, g_sle_uart_conn_id, sle_uart_send_param);
-            
+            uapi_uart_write(UART_BUS, (uint8_t *)(cmd_gpio), 7, 0);
         }
    }
     
@@ -201,7 +201,15 @@ void adc_callback(uint8_t ch, uint32_t *buffer, uint32_t length, bool *next)//ad
             cmd_adc[5]=x_ten_r;
             cmd_adc[6]=x_one_r;
             printf("teat_channel: %d, voltage: %d %d %d %dmv\r\n", ch,x_thousand_i, x_hundred_i,x_ten_i,x_one_i);
-            }
+           
+        ssapc_write_param_t *sle_uart_send_param = get_g_sle_uart_send_param();
+        uint16_t g_sle_uart_conn_id = get_g_sle_uart_conn_id();
+        sle_uart_send_param->data_len = 7;
+        sle_uart_send_param->data = cmd_adc;
+        ssapc_write_req(0, g_sle_uart_conn_id, sle_uart_send_param); 
+        
+        uapi_uart_write(UART_BUS, (uint8_t *)(cmd_adc), 7, 0); 
+        }
         }
         else if(ch==1)
         {
@@ -220,7 +228,16 @@ void adc_callback(uint8_t ch, uint32_t *buffer, uint32_t length, bool *next)//ad
             cmd_adc[4]=y_hundred_r;
             cmd_adc[5]=y_ten_r;
             cmd_adc[6]=y_one_r;
-        printf("teat_channel: %d, voltage: %d %d %d %dmv\r\n", ch,y_thousand_i, y_hundred_i,y_ten_i,y_one_i);
+        printf("teat_channel: %d, voltage: %d %d %d %dmv\r\n",
+         ch,y_thousand_i, y_hundred_i,y_ten_i,y_one_i);
+        ssapc_write_param_t *sle_uart_send_param = get_g_sle_uart_send_param();
+        uint16_t g_sle_uart_conn_id = get_g_sle_uart_conn_id();
+        sle_uart_send_param->data_len = 7;
+        sle_uart_send_param->data = cmd_adc;
+        ssapc_write_req(0, g_sle_uart_conn_id, sle_uart_send_param); 
+        
+        uapi_uart_write(UART_BUS, (uint8_t *)(cmd_adc), 7, 0);
+
         }
         }
 
@@ -236,11 +253,7 @@ void adc_callback(uint8_t ch, uint32_t *buffer, uint32_t length, bool *next)//ad
         sle_tx_buff[7]=y_ten_r;
         sle_tx_buff[8]=y_one_r; */
 
-        ssapc_write_param_t *sle_uart_send_param = get_g_sle_uart_send_param();
-        uint16_t g_sle_uart_conn_id = get_g_sle_uart_conn_id();
-        sle_uart_send_param->data_len = 7;
-        sle_uart_send_param->data = cmd_adc;
-        ssapc_write_req(0, g_sle_uart_conn_id, sle_uart_send_param); 
+
     
 }
 

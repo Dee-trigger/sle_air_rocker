@@ -1,4 +1,4 @@
-# Install script for directory: Z:/my_github_pjt/sle_air_rocker/src/application/samples/peripheral/rocker_rec
+# Install script for directory: Z:/my_github_pjt/sle_air_rocker/src/application/samples/peripheral/rocker1
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

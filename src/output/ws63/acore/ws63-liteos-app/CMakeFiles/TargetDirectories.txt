@@ -25,8 +25,8 @@ Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/applicatio
 Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/application/samples/CMakeFiles/rebuild_cache.dir
 Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/application/samples/peripheral/CMakeFiles/edit_cache.dir
 Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/application/samples/peripheral/CMakeFiles/rebuild_cache.dir
-Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/application/samples/peripheral/rocker_rec/CMakeFiles/edit_cache.dir
-Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/application/samples/peripheral/rocker_rec/CMakeFiles/rebuild_cache.dir
+Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/application/samples/peripheral/rocker1/CMakeFiles/edit_cache.dir
+Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/application/samples/peripheral/rocker1/CMakeFiles/rebuild_cache.dir
 Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/application/ws63/CMakeFiles/edit_cache.dir
 Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/application/ws63/CMakeFiles/rebuild_cache.dir
 Z:/my_github_pjt/sle_air_rocker/src/output/ws63/acore/ws63-liteos-app/application/ws63/ws63_liteos_application/CMakeFiles/ws63_liteos_app.dir
